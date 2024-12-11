@@ -1,9 +1,9 @@
 import { Feature } from '../../components';
-import './WhatGPT3.css';
+import './Digital.css';
 
 const WhatGPT3 = () => {
   return (
-    <section className='whatgpt3' id='whatgpt3'>
+    <section className='whatgpt3' id='A_propos'>
       <div className='section-center whatgpt3__center'>
         <Feature
           big

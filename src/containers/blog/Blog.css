@@ -1,13 +1,97 @@
+/* Styling pour le titre principal */
 .blog__heading h1 {
   font-size: 20px;
   margin-bottom: 1rem;
   padding: 1rem 0;
 }
+.blog__heading h1:hover {
+  transform: scale(1.05);
+}
 
+/* Styles pour les titres des articles */
+.blog__container h3 {
+  color: #ff7b00;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.blog__container h3:hover {
+  transform: scale(1.1);
+  color: #ff5a00;
+}
+
+/* Effet de transition pour les titres h4 */
+.blog__container h4 {
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.blog__container h4:hover {
+  color: #cbcbcb;
+  transform: translateY(-5px);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Container principal avec une grille */
+.blog__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  transition: transform 0.3s ease;
+}
+
+.blog__container:hover {
+  transform: translateY(-5px);
+}
+
+.blog__containerRight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.blog__containerRight:hover {
+  transform: translateY(-5px);
+}
+
+/* Effet sur les images des articles */
+.blog__container img {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.blog__container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Réactivité pour les petits écrans */
+@media screen and (max-width: 720px) {
+  .blog__container {
+    display: block;
+  }
+  
+  .blog__containerRight {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Réactivité pour les grands écrans */
 @media screen and (min-width: 720px) {
+  .blog__heading h1 {
+    font-size: 36px;
+    max-width: 40rem;
+  }
+
   .blog__container {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -15,11 +99,5 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-  }
-
-  .blog__heading h1 {
-    font-size: 33px;
-
-    max-width: 40rem;
   }
 }

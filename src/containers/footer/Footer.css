@@ -1,66 +1,105 @@
+/* Conteneur du pied de page */
 .footer {
-  background-color: var(--color-footer);
+  background-color: rgb(8, 0, 34);
   color: #fff;
   padding: 4rem 0;
-}
-
-.footer__heading h1 {
-  font-size: 1.5rem;
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-top: none;
+  margin-top: 0;
 }
 
-.footer__btn {
-  display: flex;
-  justify-content: center;
-}
-
-.footer__btn button {
-  border: transparent;
-  border: 1px solid #fff;
-  background-color: transparent;
-  color: #fff;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  cursor: pointer;
-  font-weight: bold;
+/* Section des liens */
+.footer__center {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer__links {
-  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
+/* Logo du footer */
 .footer__linksLogo img {
-  width: 100px !important;
+  width: 120px;
+  margin-bottom: 1rem;
 }
 
 .footer__linksLogo p {
   max-width: 20rem;
   color: #fff;
   padding: 1rem 0;
+  font-size: 1rem;
+  margin: 0 auto;
 }
 
+/* Liens */
 .footer__link h4 {
-  margin: 2rem 0 1rem;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .footer__link p {
-  color: #fff;
+  color: #ccc;
   margin-bottom: 0;
-  margin-bottom: 0.75rem;
-  font-size: 11px;
+  font-size: 0.9rem;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.footer__copyright {
+.footer__link p:hover {
+  color: #ff7b00;
+}
+
+/* Icônes sociales */
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer__socials a {
   color: #fff;
-  text-align: center;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
 }
 
+.footer__socials a:hover {
+  color: #ff7b00;
+}
+
+/* Copyright */
+.footer__copyright {
+  color: #ccc;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+/* Message Made with Love */
+.footer__madeWithLove {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer__madeWithLove p {
+  font-style: italic;
+}
+
+/* Design réactif */
 @media screen and (min-width: 768px) {
   .footer__links {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
+    column-gap: 2rem;
   }
 }
 

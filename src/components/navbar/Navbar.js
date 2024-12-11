@@ -7,24 +7,26 @@ const Menu = () => {
   return (
     <>
       <p>
-        <a href='#home'>Accueil</a>
+        <a href='#Accueil'>Accueil</a>
       </p>
 
       <p>
-        <a href='#whatgpt3'>À propos</a>
+        <a href='#A_propos'>À propos</a>
       </p>
 
       <p>
-        <a href='#possibility'>Services</a>
+        <a href='#Contrôle'>Contrôle</a>
       </p>
 
       <p>
-        <a href='#features'>Contact</a>
+        <a href='#services'>Services</a>
       </p>
 
       <p>
-        <a href='#blog'>ff</a>
+        <a href='#contact'>Contact</a>
       </p>
+
+      
     </>
   );
 };

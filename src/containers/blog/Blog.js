@@ -10,7 +10,7 @@ import './Blog.css';
 
 const Blog = () => {
   return (
-    <section className='section blog'>
+    <section className='section blog' id='services'>
       <div className='section-center blog__center'>
         <div className='blog__heading'>
           <h1 className='gradient__text'>Services</h1>
@@ -20,48 +20,40 @@ const Blog = () => {
           <div className='blog__containerLeft'>
             <Article
               imgUrl={image1}
-              date='Nov, 24 2021'
-              title='GPT-3 and Open AI is the future. Let us explore how it is?
-'
+              date={<h3>Télésurveillance</h3>}
+              title={<h4>Pour garder un oeil sur votre domicile ou entreprise peu importe où vous êtes</h4>}
             />
           </div>
+          
           <div className='blog__containerRight'>
+          <Article
+              imgUrl={image4}
+              date={<h3>Alarme</h3>}
+              title={<h4>Pour une protection constante 24h/24 et 7j/7 de votre domicile ou entreprise</h4>}
+            />
+            
             <Article
               imgUrl={image5}
-              date='Nov, 24 2021'
-              title='GPT-3 and Open AI is the future. Let us explore how it is?
-'
+              date={<h3>Contrôle d'accès</h3>}
+              title={<h4>Pour contrôler les permissions d'accès et avoir un historique des mouvements</h4>}
             />
             <Article
               imgUrl={image2}
-              date='Nov, 24 2021'
-              title='GPT-3 and Open AI is the future. Let us explore how it is?
-'
+              date={<h3>Détection d'incendie</h3>}
+              title={<h4>Pour gérer les risques efficacement et réduire au minimum les incidents.</h4>}
             />
             <Article
               imgUrl={image3}
-              date='Nov, 24 2021'
-              title='GPT-3 and Open AI is the future. Let us explore how it is?
-'
+              date={<h3>Domotique</h3>}
+              title={<h4>Pour un espace de vie à la fine pointe de la technologie</h4>}
             />
-            <Article
-              imgUrl={image4}
-              date='Nov, 24 2021'
-              title='GPT-3 and Open AI is the future. Let us explore how it is?
-'
-            />
+            
             <Article
               imgUrl={image6}
-              date='Nov, 24 2021'
-              title='GPT-3 and Open AI is the future. Let us explore how it is?
-'
+              date={<h3>Réseautique</h3>}
+              title={<h4>Pour des installations réseaux fiables et bien pensées</h4>}
             />
-            <Article
-              imgUrl={image4}
-              date='Nov, 24 2021'
-              title='GPT-3 and Open AI is the future. Let us explore how it is?
-'
-            />
+          
           </div>
         </div>
       </div>

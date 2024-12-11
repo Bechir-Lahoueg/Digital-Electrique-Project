@@ -4,7 +4,8 @@ import {
   Footer,
   Header,
   Possibility,
-  WhatGPT3,
+  Digital,
+  Contact,
 } from './containers';
 import { CTA, Brand, Navbar } from './components';
 import './App.css';
@@ -17,11 +18,17 @@ const App = () => {
       </header>
 
       <Brand />
-      <WhatGPT3 />
+      <Digital />
+      
       <Features />
+      
       <Possibility />
-      <Blog />
+      
       <CTA />
+
+      <Blog />
+     
+      <Contact />
       <Footer />
     </div>
   );

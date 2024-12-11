@@ -3,7 +3,7 @@ import './Possibility.css';
 
 const Possibility = () => {
   return (
-    <section className='section possibility' id='possibility'>
+    <section className='section possibility' id='Contrôle'>
       <div className='section-center possibility__center'>
         <article className='possibility__left'>
         <img src={possibilityImage} alt='possibility pic' />
