@@ -1,103 +1,120 @@
-/* Styling pour le titre principal */
+/* Conteneur principal */
 .blog__heading h1 {
-  font-size: 20px;
+  font-size: 30px;
+  color: #333;
   margin-bottom: 1rem;
-  padding: 1rem 0;
-}
-.blog__heading h1:hover {
-  transform: scale(1.05);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Styles pour les titres des articles */
-.blog__container h3 {
-  color: #ff7b00;
-  font-size: 22px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/* Animations sur le titre */
+.blog__heading h1:hover {
+  color: #ff5722;
+  transform: scale(1.05);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.blog__container h3:hover {
-  transform: scale(1.1);
-  color: #ff5a00;
+/* Conteneur des articles */
+.blog__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  justify-items: center;
 }
 
-/* Effet de transition pour les titres h4 */
+/* Chaque article */
+.article {
+  background-color: #2c3e50;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 320px; /* Largeur maximale */
+}
+
+/* Survol de l'article */
+.article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Images avec un effet de zoom */
+.article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.article img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* Styles pour les titres des articles (date) */
+.blog__container h3 {
+  color: #ff7b00;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 10px 0;
+}
+
+/* Animation sur les titres h3 */
+.blog__container h3:hover {
+  color: #ff5722;
+  transform: scale(1.05);
+}
+
+/* Titres des articles (h4) */
 .blog__container h4 {
   color: white;
   font-size: 18px;
-  line-height: 1.6;
   font-weight: 500;
+  line-height: 1.6;
+  margin: 10px 0;
   transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .blog__container h4:hover {
   color: #cbcbcb;
   transform: translateY(-5px);
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Container principal avec une grille */
-.blog__container {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-  transition: transform 0.3s ease;
-}
-
-.blog__container:hover {
-  transform: translateY(-5px);
-}
-
-.blog__containerRight {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.blog__containerRight:hover {
-  transform: translateY(-5px);
-}
-
-/* Effet sur les images des articles */
-.blog__container img {
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-}
-
-.blog__container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Réactivité pour les petits écrans */
+/* Mise en page sur des petits écrans */
 @media screen and (max-width: 720px) {
   .blog__container {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne pour les petits écrans */
   }
-  
-  .blog__containerRight {
-    grid-template-columns: 1fr;
+
+  .article {
+    margin-bottom: 1rem;
   }
 }
 
-/* Réactivité pour les grands écrans */
-@media screen and (min-width: 720px) {
-  .blog__heading h1 {
-    font-size: 36px;
-    max-width: 40rem;
-  }
-
+/* Mise en page sur écrans moyens */
+@media screen and (min-width: 720px) and (max-width: 1024px) {
   .blog__container {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
   }
+}
 
-  .blog__containerRight {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+/* Mise en page sur grands écrans */
+@media screen and (min-width: 1024px) {
+  .blog__container {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
   }
 }

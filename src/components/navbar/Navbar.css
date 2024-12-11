@@ -1,50 +1,64 @@
+/* Navbar */
 .navbar {
   height: 120px;
-  display: flex; /* Changez de grid à flex pour aligner horizontalement */
-  align-items: center; /* Centrez les éléments verticalement */
-  justify-content: space-between; /* Espace entre le logo et les autres composants */
-  padding: 0 2rem; /* Ajoute de l'espace latéral */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 
+/* Logo */
 .navbar__linksLogo {
   width: 200px;
   height: 130px;
-  margin-right: auto; /* Pousse le logo vers la gauche */
+  margin-right: auto;
 }
 
+/* Liens de la navbar */
 .navbar__links {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Aligne les liens à droite */
-  width: auto; /* Ajustez si nécessaire */
-  gap: 1rem; /* Espacement entre les liens */
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
+/* Conteneur des liens */
 .navbar__linksContainer {
   display: flex;
   align-items: center;
 }
 
+/* Style des liens */
 .navbar__linksContainer > p {
   margin-bottom: 0;
 }
 
 .navbar__linksContainer > p a {
   color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.navbar__linksContainer > p,
-.navbar__menuContainer > p {
+.navbar__linksContainer > p {
   color: #fff !important;
   font-family: var(--font-family);
   font-size: 18px;
   font-weight: 500;
-  line-height: 25px;
   text-transform: capitalize;
   margin: 0 1rem;
   cursor: pointer;
 }
 
+/* Effet Hover */
+.navbar__linksContainer > p a:hover {
+  color: #007bff; /* Couleur du texte au survol */
+  transform: translateY(-3px); /* Déplacement vers le haut au survol */
+  background-color: rgba(0, 123, 255, 0.1); /* Fond légèrement bleu */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 5px 10px; /* Ajout d'un peu de padding */
+}
+
+/* Menu mobile */
 .navbar__menu {
   display: none;
   margin-left: 1rem;
@@ -54,6 +68,7 @@
   cursor: pointer;
 }
 
+/* Menu mobile (affichage) */
 .navbar__menuContainer {
   display: flex;
   justify-content: flex-end;
@@ -73,6 +88,7 @@
   color: #fff;
 }
 
+/* Responsive */
 @media screen and (max-width: 1050px) {
   .navbar__linksContainer {
     display: none;

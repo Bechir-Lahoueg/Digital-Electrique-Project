@@ -20,7 +20,7 @@ const Footer = () => {
 
           <div className="footer__link">
             <h4>Contact</h4>
-            <p>123 Avenue Électrique, Ville Tech</p>
+            <p>Nabeul 8000, Tunisie</p>
             <p>(+216) 22.830.811</p>
             <p>(+216) 72.287.463</p>
 
@@ -31,7 +31,7 @@ const Footer = () => {
             <a href="https://www.facebook.com/people/Soci%C3%A9t%C3%A9-Digital-electrique/100090719380809" aria-label="Facebook">
               <FaFacebook />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/people/Soci%C3%A9t%C3%A9-Digital-electrique/100090719380809" aria-label="Instagram">
               <FaInstagram />
             </a>
           </div>

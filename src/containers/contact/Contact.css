@@ -3,8 +3,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: transparent;
-    color: #fff;
+    background-color: transparent; /* Pas de background */
+    color: #ddd;
 }
 
 /* Section principale */
@@ -13,8 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px 10%;
-    background-color: transparent;
-    color: #fff;
     flex-direction: column;
 }
 
@@ -27,50 +25,51 @@ body {
 .contact-info h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ff5722;
+    background: linear-gradient(90deg, #ff6f61, #ffb74d, #4db6ac, #64b5f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-info p {
     font-size: 1.2rem;
     line-height: 1.6;
+    color: #bbb;
 }
 
 .contact-info a {
-    color: #ff5722;
+    color: #4db6ac;
     text-decoration: none;
     font-weight: bold;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
+    color: #64b5f6;
 }
 
 /* Formulaire de contact */
 .contact-form {
-    max-width: 900px;
+    max-width: 800px;
     width: 100%;
     padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #2c3e50, #34495e, #16a085, #1abc9c);
-    background-size: 400% 400%;
-    animation: rainbowAnimation 8s ease infinite; /* Animation de dégradé */
-    color: #fff;
+    border-radius: 15px;
+    border: 1px solid #444;
+    background: linear-gradient(135deg, #2c2c54, #24243e, #141414); /* Dégradé sombre texturé */
+    background-size: 200% 200%;
+    animation: gradientAnimation 6s ease infinite; /* Animation de changement de fond */
+    color: #ddd;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Animation de dégradé sombre avec effet arc-en-ciel */
-@keyframes rainbowAnimation {
+/* Animation de dégradé texturé */
+@keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
     }
-    25% {
-        background-position: 50% 50%;
-    }
     50% {
         background-position: 100% 50%;
-    }
-    75% {
-        background-position: 50% 50%;
     }
     100% {
         background-position: 0% 50%;
@@ -99,10 +98,10 @@ form {
 }
 
 .form-group label {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: 8px;
-    color: #fff;
+    color: #ddd;
 }
 
 .form-group input,
@@ -110,17 +109,19 @@ form {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
     border-radius: 8px;
+    background-color: #1c1c1c;
+    color: #fff;
     box-sizing: border-box;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ff5722;
+    border-color: #4db6ac;
     outline: none;
-    background-color: rgba(255, 87, 34, 0.2);
+    box-shadow: 0 0 5px rgba(77, 182, 172, 0.5);
 }
 
 .form-group textarea {
@@ -128,28 +129,40 @@ form {
     resize: none;
 }
 
-/* Bouton */
+/* Bouton avec couleur changeable */
 .submit-btn {
-    background-color: #ff5722;
+    background: linear-gradient(45deg, #ff6f61, #ffb74d, #4db6ac, #64b5f6);
+    background-size: 300% 300%;
+    animation: buttonGradient 4s ease infinite; /* Animation du dégradé */
     color: white;
     padding: 15px 30px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Centrage du bouton */
+    transition: transform 0.2s ease, opacity 0.3s ease;
     margin: 20px auto 0;
     display: block;
-    width: 50%; 
+    width: 40%;
+    text-align: center;
+}
+
+/* Animation du bouton */
+@keyframes buttonGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .submit-btn:hover {
-    background-color: #e64a19;
-}
-
-.submit-btn:hover {
-    background-color: #e64a19;
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
 /* Responsive design */
