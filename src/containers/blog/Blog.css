@@ -1,0 +1,25 @@
+.blog__heading h1 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 720px) {
+  .blog__container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blog__containerRight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .blog__heading h1 {
+    font-size: 33px;
+
+    max-width: 40rem;
+  }
+}

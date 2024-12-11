@@ -1,0 +1,43 @@
+
+.possibility__right h4:last-child {
+  color: #ff8a71;
+  font-size: 14px;
+}
+
+.possibility__right h1 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.possibility__right p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 920px) {
+  .possibility__center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .possibility__right {
+    align-self: flex-end;
+  }
+  .possibility__right h4 {
+    font-size: 18px;
+  }
+
+  .possibility__right h4:last-child {
+    font-size: 18px;
+  }
+
+  .possibility__right h1 {
+    font-size: 34px;
+    line-height: 45px;
+  }
+
+  .possibility__right p {
+    font-size: 18px;
+  }
+}

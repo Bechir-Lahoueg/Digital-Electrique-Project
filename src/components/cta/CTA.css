@@ -1,0 +1,142 @@
+/* Dégradé de fond général pour la section (couleurs plus douces) */
+.cta__center {
+  background: linear-gradient(135deg, #6a4c92, #5c8b73, #7c6e2f, #5f85b7, #9a73a5, #c4932f, #6e8b4b);
+  background-size: 400% 400%;
+  animation: rainbowBg 15s ease infinite; /* Animation pour dégradé doux */
+  padding: 4rem;
+  border-radius: 1rem;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Style pour le titre principal */
+.cta__content h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: textColor 6s ease infinite; /* Animation douce pour l'effet arc-en-ciel */
+}
+
+/* Sous-titre pour les témoignages */
+.cta__content h4 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Conteneur des témoignages */
+.testimonials {
+  margin-top: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Style pour chaque témoignage (fond plus doux) */
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.2); /* Fond semi-transparent mais doux */
+  padding: 2rem;
+  border-radius: 12px;
+  font-style: italic;
+  color: #fff;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* Ombre légère et douce */
+}
+
+/* Effet de transition fluide pour l'élément actif */
+.testimonial.active {
+  transform: scale(1.05); /* Agrandissement léger de l'élément actif */
+  opacity: 1;
+}
+
+/* Style pour le texte des témoignages */
+.testimonial p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Style pour le nom du client */
+.testimonial p:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #d1d1d1;
+}
+
+/* Conteneur des points de navigation */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Style pour chaque point (couleurs plus douces) */
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5); /* Point doux */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: rainbowDot 2s linear infinite; /* Animation pour les points doux */
+}
+
+/* Changer la couleur du point actif */
+.dot.active {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+/* Effet de survol pour les points */
+.dot:hover {
+  background-color: #8ab4f8;
+}
+
+/* Animation pour l'arc-en-ciel de fond */
+@keyframes rainbowBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animation pour changer la couleur du texte (arc-en-ciel atténué) */
+@keyframes textColor {
+  0% { color: #ff2e2e; }
+  14% { color: #ffffff; }
+  28% { color: #7c6e2f; }
+  42% { color: #99c3fa; }
+  57% { color: #c400fa; }
+  71% { color: #545d5d; }
+  85% { color: #6e8b4b; }
+  100% { color: #6a4c92; }
+}
+
+/* Animation pour les points */
+@keyframes rainbowDot {
+  0% { background-color: #6a4c92; }
+  20% { background-color: #5c8b73; }
+  40% { background-color: #7c6e2f; }
+  60% { background-color: #5f85b7; }
+  80% { background-color: #9a73a5; }
+  100% { background-color: #c4932f; }
+}

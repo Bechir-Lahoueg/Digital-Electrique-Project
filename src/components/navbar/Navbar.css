@@ -1,0 +1,85 @@
+.navbar {
+  height: 120px;
+  display: flex; /* Changez de grid à flex pour aligner horizontalement */
+  align-items: center; /* Centrez les éléments verticalement */
+  justify-content: space-between; /* Espace entre le logo et les autres composants */
+  padding: 0 2rem; /* Ajoute de l'espace latéral */
+}
+
+.navbar__linksLogo {
+  width: 200px;
+  height: 130px;
+  margin-right: auto; /* Pousse le logo vers la gauche */
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligne les liens à droite */
+  width: auto; /* Ajustez si nécessaire */
+  gap: 1rem; /* Espacement entre les liens */
+}
+
+.navbar__linksContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__linksContainer > p {
+  margin-bottom: 0;
+}
+
+.navbar__linksContainer > p a {
+  color: #fff;
+}
+
+.navbar__linksContainer > p,
+.navbar__menuContainer > p {
+  color: #fff !important;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.navbar__menu {
+  display: none;
+  margin-left: 1rem;
+}
+
+.navbar__menu svg {
+  cursor: pointer;
+}
+
+.navbar__menuContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: end;
+  background: var(--color-footer);
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__menuContainerLinks p a {
+  color: #fff;
+}
+
+@media screen and (max-width: 1050px) {
+  .navbar__linksContainer {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+    margin-left: auto;
+  }
+}
